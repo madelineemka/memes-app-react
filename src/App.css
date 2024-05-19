@@ -1,38 +1,96 @@
-.App {
+:root {
+  --green: rgb(0, 255, 195);
+  --red: rgba(245, 8, 8);
+  --fontlight: rgb(231, 231, 240);
+  --bluedark: rgb(30 45 64);
+
+  /* 
+  --darker: rgb(43, 42, 42);
+  --blue: rgb(95, 168, 197);
+  --dark: rgb(58, 58, 58); */
+}
+
+* {
+  color: var(--fontlight);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /* background: var(--bluedark); */
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: var(--bluedark);
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+main {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+img.logo {
+  height: 120px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+.meme {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px 0;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.75);
+  background: linear-gradient(
+    to right top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.25)
+  );
+  border: solid ghostwhite;
+  border-radius: 20px;
+  box-shadow: 0px 8px 24px 0 rgba(0, 0, 0, 0.5);
+  margin: 15px 0;
+}
+
+.meme img {
+  height: auto;
+  width: 450px;
+}
+
+.meme-list {
+  width: 600px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
 }
