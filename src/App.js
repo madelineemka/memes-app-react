@@ -1,10 +1,10 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import MemeContainer from "./MemeContainer";
-import Routing from "./Routing";
 import MemesLogo from "./components/MemesLogo";
 import Navigation from "./components/Navigation";
+import MemeContainer from "./components/MemeContainer";
+import Routing from "./components/Routing";
 
 function App() {
   return (

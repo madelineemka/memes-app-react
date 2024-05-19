@@ -3,10 +3,11 @@
   --red: rgba(245, 8, 8);
   --fontlight: rgb(231, 231, 240);
   --bluedark: rgb(30 45 64);
+  --darkgreen: rgba(0, 255, 195, 0.384);
+  --darkred: rgba(245, 8, 8, 0.384);
 }
 
 * {
-  color: var(--fontlight);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   box-sizing: border-box;
@@ -22,6 +23,7 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   background: var(--bluedark);
+  color: var(--fontlight);
 }
 
 p {
@@ -153,6 +155,7 @@ nav ul li {
 
 .upVoteBtn {
   margin-right: 20px;
+  color: var(--green);
 }
 
 .upVotePar {
@@ -160,7 +163,7 @@ nav ul li {
 }
 
 .upVoteBtn:hover {
-  background-color: var(--green);
+  background-color: var(--darkgreen);
   border-radius: 5px;
 }
 
@@ -173,6 +176,22 @@ nav ul li {
 }
 
 .downVoteBtn:hover {
-  background-color: var(--red);
+  background-color: var(--darkred);
   border-radius: 5px;
+}
+
+.star-yellow {
+  color: gold;
+  background: transparent;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.star-gray {
+  color: gray;
+  background: transparent;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
 }

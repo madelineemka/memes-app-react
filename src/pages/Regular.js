@@ -1,7 +1,7 @@
 import React from "react";
 import MemeList from "../components/MemeList";
 
-const Regular = ({ memes, onUpvote, onDownvote }) => {
+const Regular = ({ memes, onUpvote, onDownvote, onToggleStar }) => {
   const regularMemes = memes.filter(
     (meme) => meme.upvotes - meme.downvotes <= 5
   );
@@ -13,6 +13,7 @@ const Regular = ({ memes, onUpvote, onDownvote }) => {
         memes={regularMemes}
         onUpvote={onUpvote}
         onDownvote={onDownvote}
+        onToggleStar={onToggleStar}
       />
     </div>
   );

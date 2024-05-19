@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import memesData from "./memesData";
-import Hot from "./pages/Hot";
-import Regular from "./pages/Regular";
+import memesData from "../memesData";
 
 const MemeContainer = ({ children }) => {
   const [memes, setMemes] = useState(memesData);
@@ -20,10 +18,18 @@ const MemeContainer = ({ children }) => {
     setMemes(updatedMemes);
   };
 
+  const toggleStar = (meme) => {
+    const updatedMemes = memes.map((m) =>
+      m.title === meme.title ? { ...m, isStarred: !m.isStarred } : m
+    );
+    setMemes(updatedMemes);
+  };
+
   return React.cloneElement(children, {
     memes,
     onUpvote: handleUpvote,
     onDownvote: handleDownvote,
+    onToggleStar: toggleStar,
   });
 };
 
