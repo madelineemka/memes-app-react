@@ -1,8 +1,8 @@
-# Meme Voting App
+# Memes Voting App
 
 ## Description
 
-The Meme Voting App is a simple React application that displays a list of memes (funny images) and allows users to upvote or downvote each meme. Memes with a certain number of upvotes (upvote - downvote > 5) are classified as "Hot" and displayed on the `/hot` route, while the rest are displayed on the `/regular` route.
+The Memes Voting App is a simple React application that displays a list of memes (funny images) and allows users to upvote or downvote each meme. Memes with a certain number of upvotes (upvote - downvote > 5) are classified as "Hot" and displayed on the `/hot` route, while the rest are displayed on the `/regular` route.
 
 ## Features
 
