@@ -11,6 +11,9 @@ const Navigation = () => {
         <li>
           <NavLink to="/regular">Regular</NavLink>
         </li>
+        <li>
+          <NavLink to="/formAddMeme">Add Meme</NavLink>
+        </li>
       </ul>
     </nav>
   );
