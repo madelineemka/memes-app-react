@@ -3,37 +3,36 @@
   --red: rgba(245, 8, 8);
   --fontlight: rgb(231, 231, 240);
   --bluedark: rgb(30 45 64);
-
-  /* 
-  --darker: rgb(43, 42, 42);
-  --blue: rgb(95, 168, 197);
-  --dark: rgb(58, 58, 58); */
 }
 
 * {
   color: var(--fontlight);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  /* background: var(--bluedark); */
   text-align: center;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   min-height: 100vh;
   min-width: 100vw;
-  text-align: center;
+  background: var(--bluedark);
+}
+
+p {
+  padding-top: 10px;
+}
+
+h3 {
+  padding-bottom: 10px;
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   box-sizing: border-box;
   margin: 0;
@@ -47,10 +46,12 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 120px;
 }
 
 img.logo {
-  height: 120px;
+  height: 100px;
+  padding-right: 100px;
 }
 
 nav ul {
@@ -63,11 +64,56 @@ nav ul li {
   margin-right: 20px;
 }
 
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 255, 195, 0.3);
+  background: var(--bluedark);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar a {
+  display: block;
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar a.active {
+  background-color: var(--green);
+}
+
+.main {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: var(--bluedark);
+}
+.meme-list {
+  width: 600px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
 .meme {
   border: 1px solid #ddd;
-  padding: 20px;
+  padding: 20px 40px;
   margin: 10px 0;
-  padding: 40px;
+
   background: rgba(0, 0, 0, 0.75);
   background: linear-gradient(
     to right top,
@@ -82,15 +128,51 @@ nav ul li {
 
 .meme img {
   height: auto;
-  width: 450px;
+  width: 400px;
 }
 
-.meme-list {
-  width: 600px;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
+.upVotePar {
+  color: var(--green);
+}
+
+.downVotePar {
+  color: var(--red);
+}
+
+.voteBtn {
+  padding-top: 15px;
+}
+
+.upVoteBtn,
+.downVoteBtn {
+  font-size: 30px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.upVoteBtn {
+  margin-right: 20px;
+}
+
+.upVotePar {
+  color: var(--green);
+}
+
+.upVoteBtn:hover {
+  background-color: var(--green);
+  border-radius: 5px;
+}
+
+.downVotePar {
+  color: var(--red);
+}
+
+.downVoteBtn {
+  color: var(--red);
+}
+
+.downVoteBtn:hover {
+  background-color: var(--red);
+  border-radius: 5px;
 }

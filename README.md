@@ -1,3 +1,17 @@
+# Meme Voting App
+
+## Description
+
+The Meme Voting App is a simple React application that displays a list of memes (funny images) and allows users to upvote or downvote each meme. Memes with a certain number of upvotes (upvote - downvote > 5) are classified as "Hot" and displayed on the `/hot` route, while the rest are displayed on the `/regular` route.
+
+## Features
+
+- Upvote and downvote memes.
+- Separate routes for "Hot" memes and "Regular" memes.
+- Navigation menu to switch between "Hot" and "Regular" meme lists.
+- Real-time filtering of memes based on votes.
+- Fixed navigation menu for easy access.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,4 +82,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # memes-app-react

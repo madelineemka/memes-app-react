@@ -27,8 +27,10 @@ const App = () => {
   return (
     <div className="App">
       <Router>
-        <MemesLogo />
-        <Navigation />
+        <div className="menu">
+          <MemesLogo />
+          <Navigation />
+        </div>
         <main>
           <Routes>
             <Route
