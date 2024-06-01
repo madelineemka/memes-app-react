@@ -4,13 +4,13 @@ import Meme from "./Meme";
 const MemeList = ({ memes, onUpvote, onDownvote, onToggleStar }) => {
   return (
     <div className="meme-list">
-      {memes.map((meme, index) => (
+      {memes.map((meme) => (
         <Meme
-          key={index}
+          key={meme.id}
           meme={meme}
-          onUpvote={onUpvote}
-          onDownvote={onDownvote}
-          onToggleStar={onToggleStar}
+          onUpvote={() => onUpvote(meme.id)}
+          onDownvote={() => onDownvote(meme.id)}
+          onToggleStar={() => onToggleStar(meme.id)}
         />
       ))}
     </div>

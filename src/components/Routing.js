@@ -3,8 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import Hot from "../pages/Hot";
 import Regular from "../pages/Regular";
 import FormAddMeme from "../pages/FormAddMeme";
+import Favorites from "../pages/Favorites";
 
-const Routing = ({ memes, onUpvote, onDownvote, onToggleStar }) => (
+const Routing = ({ memes, onUpvote, onDownvote, onToggleStar, onAddMeme }) => (
   <Routes>
     <Route
       path="/hot"
@@ -29,6 +30,17 @@ const Routing = ({ memes, onUpvote, onDownvote, onToggleStar }) => (
       }
     />
     <Route
+      path="/favorites"
+      element={
+        <Favorites
+          memes={memes}
+          onUpvote={onUpvote}
+          onDownvote={onDownvote}
+          onToggleStar={onToggleStar}
+        />
+      }
+    />
+    <Route
       path="/"
       element={
         <Regular
@@ -39,7 +51,9 @@ const Routing = ({ memes, onUpvote, onDownvote, onToggleStar }) => (
         />
       }
     />
-    <Route path="/formAddMeme" element={<FormAddMeme />} />
+    <Route
+      path="/formAddMeme"
+      element={<FormAddMeme onAddMeme={onAddMeme} />} />
   </Routes>
 );
 

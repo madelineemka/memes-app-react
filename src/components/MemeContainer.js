@@ -4,25 +4,30 @@ import memesData from "../memesData";
 const MemeContainer = ({ children }) => {
   const [memes, setMemes] = useState(memesData);
 
-  const handleUpvote = (meme) => {
+  const handleUpvote = (id) => {
     const updatedMemes = memes.map((m) =>
-      m.title === meme.title ? { ...m, upvotes: m.upvotes + 1 } : m
+      m.id === id ? { ...m, upvotes: m.upvotes + 1 } : m
     );
     setMemes(updatedMemes);
   };
 
-  const handleDownvote = (meme) => {
+  const handleDownvote = (id) => {
     const updatedMemes = memes.map((m) =>
-      m.title === meme.title ? { ...m, downvotes: m.downvotes + 1 } : m
+      m.id === id ? { ...m, downvotes: m.downvotes + 1 } : m
     );
     setMemes(updatedMemes);
   };
 
-  const toggleStar = (meme) => {
+  const toggleStar = (id) => {
     const updatedMemes = memes.map((m) =>
-      m.title === meme.title ? { ...m, isStarred: !m.isStarred } : m
+      m.id === id ? { ...m, isStarred: !m.isStarred } : m
     );
     setMemes(updatedMemes);
+  };
+
+  const addMeme = (newMeme) => {
+    const newId = memes.length + 1;
+    setMemes([...memes, { ...newMeme, id: newId}]);
   };
 
   return React.cloneElement(children, {
@@ -30,6 +35,7 @@ const MemeContainer = ({ children }) => {
     onUpvote: handleUpvote,
     onDownvote: handleDownvote,
     onToggleStar: toggleStar,
+    onAddMeme: addMeme,
   });
 };
 

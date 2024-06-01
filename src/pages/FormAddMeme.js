@@ -1,12 +1,25 @@
 import React, { useState } from "react";
 
-const FormAddMeme = () => {
+const FormAddMeme = ({ onAddMeme }) => {
   const [title, setTitle] = useState("");
   const [file, setFile] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!title || !file) return;
+    if (title && file) {
+      const newMeme = {
+        title: title,
+        img: URL.createObjectURL(file),
+        upvotes: 0,
+        downvotes: 0,
+        isStarred: false,
+      };
+      onAddMeme(newMeme);
+      setTitle("");
+      setFile(null);
+    } else {
+      alert("Please enter a title and select an image.");
+    }
   };
 
   return (
@@ -14,23 +27,25 @@ const FormAddMeme = () => {
       <h2>Add your meme</h2>
       <form onSubmit={handleSubmit}>
         <div className="memeTitle">
-          <label htmlFor="title">Meme title: </label>
-          <input
-            placeholder=" Meme Title"
-            type="text"
-            id="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
+          <label>
+            Meme Title:
+            <input
+              placeholder=" Meme Title"
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </label>
         </div>
         <div className="fileInput">
-          <label htmlFor="file">Upload file: </label>
-          <input
-            type="file"
-            id="file"
-            accept="image/*"
-            onChange={(e) => setFile(e.target.files[0])}
-          />
+          <label>
+            Upload meme:
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => setFile(e.target.files[0])}
+            />
+          </label>
         </div>
         <button className="addMemeBtn" type="submit">
           Add Meme
