@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/memes-app-react/static/css/main.e9b7ee4d.css",
+    "main.js": "/memes-app-react/static/js/main.6d1188fa.js",
+    "static/media/ITMeme13.jpg": "/memes-app-react/static/media/ITMeme13.d3f755d460c9cad73c9a.jpg",
+    "static/media/ITMeme8.jpg": "/memes-app-react/static/media/ITMeme8.a83b33caecbeb0e37bc5.jpg",
+    "static/media/ITMeme3.jpg": "/memes-app-react/static/media/ITMeme3.94cb132a812a53cc418b.jpg",
+    "static/media/ITMeme6.jpg": "/memes-app-react/static/media/ITMeme6.fd0a58a473ff97bc4e63.jpg",
+    "static/media/ITMeme1.jpg": "/memes-app-react/static/media/ITMeme1.4bbbf53363222b818232.jpg",
+    "static/media/ITMeme9.jpg": "/memes-app-react/static/media/ITMeme9.401ed87c39e052498771.jpg",
+    "static/media/ITMeme5.jpg": "/memes-app-react/static/media/ITMeme5.dfebade59312a70e2ff7.jpg",
+    "static/media/ITMeme4.jpg": "/memes-app-react/static/media/ITMeme4.05aea3da8424b76c594f.jpg",
+    "static/media/ITMeme12.jpg": "/memes-app-react/static/media/ITMeme12.a2a2a9fc9fe92286f089.jpg",
+    "static/media/ITMeme14.jpg": "/memes-app-react/static/media/ITMeme14.86c58b9bc822a3e0422d.jpg",
+    "static/media/ITMeme2.jpg": "/memes-app-react/static/media/ITMeme2.eca9164e98d7998278e3.jpg",
+    "static/media/ITMeme10.jpg": "/memes-app-react/static/media/ITMeme10.52e565b77c8d67aa82d2.jpg",
+    "static/media/ITMeme11.jpg": "/memes-app-react/static/media/ITMeme11.6683d09ea1ca0575d2d9.jpg",
+    "static/media/CodingMemesLogo.jpg": "/memes-app-react/static/media/CodingMemesLogo.092ba5b5fb12f1492dc6.jpg",
+    "index.html": "/memes-app-react/index.html",
+    "main.e9b7ee4d.css.map": "/memes-app-react/static/css/main.e9b7ee4d.css.map",
+    "main.6d1188fa.js.map": "/memes-app-react/static/js/main.6d1188fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9b7ee4d.css",
+    "static/js/main.6d1188fa.js"
+  ]
+}
